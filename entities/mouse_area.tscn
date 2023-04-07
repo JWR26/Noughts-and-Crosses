@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dl51o63tra8u0"]
+
+[ext_resource type="Script" path="res://entities/mouse_area.gd" id="1_pcnnr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2vus7"]
+size = Vector3(1.8, 0.2, 1.8)
+
+[node name="MouseArea" type="Area3D"]
+script = ExtResource("1_pcnnr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_2vus7")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

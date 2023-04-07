@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://bl8hoehdv5qwt"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4l2uk"]
+albedo_color = Color(0, 1, 0, 1)
+
+[node name="Nought" type="CSGCombiner3D"]
+material_override = SubResource("StandardMaterial3D_4l2uk")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+radius = 0.8
+height = 0.1
+sides = 64
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="."]
+operation = 2
+radius = 0.6
+height = 0.1
+sides = 64
