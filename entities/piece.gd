@@ -20,8 +20,12 @@ func _init(t: TYPE, opacity: float = 1.0) -> void:
 			self.add_child(nought.instantiate())
 		TYPE.CROSS:
 			self.add_child(cross.instantiate())
-	print(type)
 
 
 func get_type() -> TYPE:
 	return type
+
+
+func is_placed_at(coordinate: Vector2) -> bool:
+	print(coordinate, " - ", global_position)
+	return global_position.x == coordinate.y and global_position.z == coordinate.x

@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://vwyyc7bq4o8v"]
+[gd_scene load_steps=4 format=3 uid="uid://vwyyc7bq4o8v"]
 
+[ext_resource type="Script" path="res://entities/board.gd" id="1_d64h3"]
 [ext_resource type="PackedScene" uid="uid://dl51o63tra8u0" path="res://entities/mouse_area.tscn" id="1_ufle3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vkejl"]
@@ -7,69 +8,70 @@ albedo_color = Color(0.588235, 0.294118, 0, 1)
 
 [node name="Board" type="CSGCombiner3D"]
 material_override = SubResource("StandardMaterial3D_vkejl")
+script = ExtResource("1_d64h3")
 
 [node name="Base" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
 size = Vector3(6, 0.2, 6)
 
 [node name="Indent1" type="CSGBox3D" parent="." groups=["indents"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.1, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
 operation = 2
 size = Vector3(1.8, 0.2, 1.8)
 
 [node name="MouseArea" parent="Indent1" instance=ExtResource("1_ufle3")]
 
 [node name="Indent2" type="CSGBox3D" parent="." groups=["indents"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.1, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.1, 0)
 operation = 2
 size = Vector3(1.8, 0.2, 1.8)
 
 [node name="MouseArea" parent="Indent2" instance=ExtResource("1_ufle3")]
 
 [node name="Indent3" type="CSGBox3D" parent="." groups=["indents"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.1, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.1, 0)
 operation = 2
 size = Vector3(1.8, 0.2, 1.8)
 
 [node name="MouseArea" parent="Indent3" instance=ExtResource("1_ufle3")]
 
 [node name="Indent4" type="CSGBox3D" parent="." groups=["indents"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.1, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 2)
 operation = 2
 size = Vector3(1.8, 0.2, 1.8)
 
 [node name="MouseArea" parent="Indent4" instance=ExtResource("1_ufle3")]
 
 [node name="Indent5" type="CSGBox3D" parent="." groups=["indents"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.1, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.1, 2)
 operation = 2
 size = Vector3(1.8, 0.2, 1.8)
 
 [node name="MouseArea" parent="Indent5" instance=ExtResource("1_ufle3")]
 
 [node name="Indent6" type="CSGBox3D" parent="." groups=["indents"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.1, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.1, 2)
 operation = 2
 size = Vector3(1.8, 0.2, 1.8)
 
 [node name="MouseArea" parent="Indent6" instance=ExtResource("1_ufle3")]
 
 [node name="Indent7" type="CSGBox3D" parent="." groups=["indents"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.1, 5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 4)
 operation = 2
 size = Vector3(1.8, 0.2, 1.8)
 
 [node name="MouseArea" parent="Indent7" instance=ExtResource("1_ufle3")]
 
 [node name="Indent8" type="CSGBox3D" parent="." groups=["indents"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.1, 5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.1, 4)
 operation = 2
 size = Vector3(1.8, 0.2, 1.8)
 
 [node name="MouseArea" parent="Indent8" instance=ExtResource("1_ufle3")]
 
 [node name="Indent9" type="CSGBox3D" parent="." groups=["indents"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.1, 5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.1, 4)
 operation = 2
 size = Vector3(1.8, 0.2, 1.8)
 
